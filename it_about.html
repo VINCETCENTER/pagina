@@ -898,7 +898,7 @@
   <!-- Modal -->
   <div class="modal fade" id="search_bar" role="dialog">
     <div class="modal-dialog">
-      <!-- Modal content-->
+      <!-- Contenido del modal-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><i class="fa fa-close"></i></button>
@@ -908,10 +908,11 @@
             <div class="col-lg-8 col-md-8 col-sm-8 offset-lg-2 offset-md-2 offset-sm-2 col-xs-10 col-xs-offset-1">
               <div class="navbar-search">
                 <form action="#" method="get" id="search-global-form" class="search-global">
-                  <input type="text" placeholder="Type to search" autocomplete="off" name="s" id="search" value=""
+                  <input type="text" placeholder="Escribe para buscar" autocomplete="off" name="s" id="search" value=""
                     class="search-global__input">
                   <button class="search-global__btn"><i class="fa fa-search"></i></button>
-                  <div class="search-global__note">Begin typing your search above and press return to search.</div>
+                  <div class="search-global__note">Comienza a escribir tu búsqueda arriba y presiona "Enter" para
+                    buscar.</div>
                 </form>
               </div>
             </div>
@@ -997,7 +998,7 @@
           </div>
         </div>
         <div class="cprt">
-          <p>Vincet Center S.R.L © Derechos de autor 2025 Diseño</p>
+          <p>Vincet Center S.R.L © Derechos de autor 2025</p>
         </div>
       </div>
     </div>
@@ -1117,6 +1118,28 @@
     }
   </script>
   <!-- google map js -->
+  <button id="scrollToTopBtn" class="scroll-to-top-btn">
+    <i class="bi bi-arrow-up"></i> <!-- Icono de flecha hacia arriba de Bootstrap Icons -->
+  </button>
+  <script>
+    // Obtén el botón
+    var mybutton = document.getElementById("scrollToTopBtn");
+
+    // Muestra el botón cuando el usuario deslice 100px hacia abajo desde la parte superior
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block"; // Muestra el botón
+      } else {
+        mybutton.style.display = "none"; // Oculta el botón
+      }
+    };
+
+    // Al hacer clic en el botón, la página se desplaza hacia arriba
+    mybutton.onclick = function () {
+      document.body.scrollTop = 0; // Para Safari
+      document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+    };
+  </script>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
   <!-- end google map js -->
